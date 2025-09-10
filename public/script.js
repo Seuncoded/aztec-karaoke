@@ -60,6 +60,23 @@ stopBtn.addEventListener("click", () => {
 
 // 💾 Save recording to Firebase
 // 💾 Save recording to Firebase
+function showModal(message = "✅ Performance saved to the gallery!") {
+  const modal = document.getElementById("customModal");
+  const modalText = modal.querySelector("p");
+  modalText.textContent = message;
+
+  modal.style.display = "flex";
+
+  // Auto close after 2 seconds
+  setTimeout(() => {
+    modal.style.display = "none";
+  }, 2000);
+
+  document.getElementById("closeModal").onclick = () => {
+    modal.style.display = "none";
+  };
+}
+
 saveBtn.addEventListener("click", async () => {
   const username = usernameInput.value.trim();
   const title = titleInput.value.trim() || "Untitled Performance";
@@ -96,7 +113,7 @@ saveBtn.addEventListener("click", async () => {
     stoppedIndicator.style.display = "none";
     audioBlob = null;
 
-    alert("✅ Performance saved!");
+    showModal();
   } catch (err) {
     console.error("Upload failed:", err);
     alert("Error uploading audio. Try again.");
@@ -151,6 +168,18 @@ onSnapshot(performancesQuery, snapshot => {
     gallery.appendChild(clipDiv);
   });
 });
+
+// Ensure only one audio plays at a time
+document.addEventListener("play", function(e){
+  if (e.target.tagName === "AUDIO") {
+    const audios = document.querySelectorAll("audio");
+    audios.forEach(audio => {
+      if (audio !== e.target) {
+        audio.pause();
+      }
+    });
+  }
+}, true);
 
 // 🎨 Theme toggle
 themeToggle.addEventListener("click", () => {
