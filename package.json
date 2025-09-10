@@ -1,8 +1,6 @@
-{
-  "scripts": {
-    "dev": "vite",                
-    "build": "node generate-env.js"
-  },
+{"scripts": {
+  "build": "node generate-env.js"
+},
   "dependencies": {
     "firebase": "^12.2.1"
   }
