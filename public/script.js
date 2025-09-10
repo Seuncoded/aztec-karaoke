@@ -180,8 +180,3 @@ document.addEventListener("play", function(e){
     });
   }
 }, true);
-
-// 🎨 Theme toggle
-themeToggle.addEventListener("click", () => {
-  document.body.classList.toggle("neon-mode");
-});
