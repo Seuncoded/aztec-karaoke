@@ -3,7 +3,6 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebas
 import { getFirestore } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 import { getStorage } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-storage.js";
 
-// ✅ Load values from env.js
 const firebaseConfig = {
   apiKey: window.env.NEXT_PUBLIC_FIREBASE_API_KEY,
   authDomain: window.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
