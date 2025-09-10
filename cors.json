@@ -1,12 +1,11 @@
 [
   {
-    "origin": ["http://localhost:8080", "http://127.0.0.1:5500", "https://aztec-karaoke.vercel.app"],
-    "method": ["GET", "HEAD", "PUT", "POST", "DELETE"],
-    "responseHeader": ["Content-Type", "x-goog-meta-*"],
-    "maxAgeSeconds": 3600
-  },
-  {
-    "origin": ["https://aztec-karaoke.vercel.app"],
+    "origin": [
+      "http://127.0.0.1:8080",
+      "http://localhost:5500",
+      "https://aztec-karaoke.vercel.app",
+      "https://*.vercel.app"
+    ],
     "method": ["GET", "HEAD", "PUT", "POST", "DELETE"],
     "responseHeader": ["Content-Type", "x-goog-meta-*"],
     "maxAgeSeconds": 3600
