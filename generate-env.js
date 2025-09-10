@@ -1,5 +1,8 @@
 // generate-env.js
-import { writeFileSync } from "fs";
+import { writeFileSync, mkdirSync } from "fs";
+
+// ensure public folder exists
+mkdirSync("./public", { recursive: true });
 
 const envFile = `
 window.env = {
@@ -13,4 +16,4 @@ window.env = {
 `;
 
 writeFileSync("./public/env.js", envFile);
-console.log("✅ env.js generated!");
+console.log("✅ env.js generated in /public");
