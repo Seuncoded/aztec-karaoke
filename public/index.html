@@ -4,44 +4,48 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aztec Karaoke 🎤</title>
+
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- Favicon -->
   <link rel="icon" type="image/png" href="https://cdn.prod.website-files.com/6847005bc403085c1aa846e0/68781eaae14324da53a92bd3_aztec-token-favicon.png">
 </head>
 <body>
-  <!-- Theme toggle top-right 
-  <button id="themeToggle">🌗 Toggle Theme</button>-->
-
+  <!-- Title -->
   <h1>Aztec Karaoke 🎶</h1>
   <p class="subtitle">Enter your Twitter handle and title, then hit record. Share your voice with the Aztec community.</p>
 
+  <!-- Controls -->
   <div class="controls-wrapper">
-    <!-- Inputs -->
     <div class="input-row">
       <input type="text" id="username" placeholder="@YourTwitterHandle" />
       <input type="text" id="titleInput" placeholder="Performance Title" />
     </div>
 
-    <!-- Buttons -->
     <div class="button-row">
       <button id="startBtn">🎤 Start Recording</button>
       <button id="stopBtn" disabled>⏹ Stop Recording</button>
       <button id="saveBtn" disabled>💾 Save to Gallery</button>
     </div>
-
-    <!-- Shuffle button
-    <button id="shuffleBtn">🔀 Play Random Performance</button> -->
   </div>
 
+  <!-- Indicators -->
   <p id="recordingIndicator">🔴 Recording in progress...</p>
   <p id="stoppedIndicator">✅ Recording finished, ready to save.</p>
 
-  <!-- Gallery Header -->
+  <!-- Gallery -->
   <h2 class="gallery-title">🎵 Community Gallery</h2>
   <div id="gallery"></div>
 
-<script src="./env.js"></script>
-<script type="module" src="/firebase.js"></script>
-<script type="module" src="/script.js"></script>
+  <!-- 🔑 Env must load first -->
+  <script src="env.js"></script>
+
+  <!-- Firebase + App logic -->
+  <script type="module" src="firebase.js"></script>
+  <script type="module" src="script.js"></script>
 </body>
 </html>
