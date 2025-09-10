@@ -1,0 +1,22 @@
+# Node modules
+node_modules/
+
+# Local env files
+.env
+.env.local
+.env.*.local
+
+# Firebase config backups
+firebase-debug.log
+.firebaserc
+
+# Mac system files
+.DS_Store
+
+# VSCode
+.vscode/
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
