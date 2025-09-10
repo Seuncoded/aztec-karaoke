@@ -6,7 +6,7 @@
     "maxAgeSeconds": 3600
   },
   {
-    "origin": ["https://your-vercel-app.vercel.app"],
+    "origin": ["https://aztec-karaoke.vercel.app"],
     "method": ["GET", "HEAD", "PUT", "POST", "DELETE"],
     "responseHeader": ["Content-Type", "x-goog-meta-*"],
     "maxAgeSeconds": 3600
