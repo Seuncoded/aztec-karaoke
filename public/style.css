@@ -395,3 +395,32 @@ button {
   font-size: 0.8rem;
 }
 
+/* Notification banner */
+.notification {
+  position: fixed;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #222;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.5s ease, top 0.5s ease;
+  z-index: 9999;
+}
+
+.notification.show {
+  opacity: 1;
+  top: 30px;
+}
+
+.notification.success {
+  background: #4caf50;
+}
+
+.notification.error {
+  background: #e53935;
+}
