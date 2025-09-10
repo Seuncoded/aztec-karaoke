@@ -125,6 +125,14 @@ saveBtn.addEventListener("click", async () => {
 // 🔄 Load all performances
 const performancesQuery = query(collection(db, "performances"), orderBy("timestamp", "desc"));
 
+const colors = [
+  "linear-gradient(135deg, #2a003f, #120022)",  // purple
+  "linear-gradient(135deg, #003f2a, #001a12)",  // deep green
+  "linear-gradient(135deg, #3f002a, #1a0012)",  // burgundy
+  "linear-gradient(135deg, #1e0033, #120022)",  // violet
+  "linear-gradient(135deg, #001f3f, #000814)"   // deep blue
+];
+
 onSnapshot(performancesQuery, snapshot => {
   gallery.innerHTML = ""; // clear before reload
   snapshot.forEach(docSnap => {
@@ -132,6 +140,9 @@ onSnapshot(performancesQuery, snapshot => {
 
     const clipDiv = document.createElement("div");
     clipDiv.classList.add("clip");
+
+  // Random background
+clipDiv.style.background = colors[Math.floor(Math.random() * colors.length)];
 
     // Header
     const headerDiv = document.createElement("div");
@@ -180,3 +191,5 @@ document.addEventListener("play", function(e){
     });
   }
 }, true);
+
+
