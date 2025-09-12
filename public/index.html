@@ -29,13 +29,22 @@
     <div class="button-row">
       <button id="startBtn">🎤 Start Recording</button>
       <button id="stopBtn" disabled>⏹ Stop Recording</button>
-      <button id="saveBtn" disabled>💾 Save to Gallery</button>
     </div>
   </div>
 
   <!-- Indicators -->
   <p id="recordingIndicator">🔴 Recording in progress...</p>
-  <p id="stoppedIndicator">✅ Recording finished, ready to save.</p>
+  <p id="stoppedIndicator">✅ Recording finished, ready to preview.</p>
+
+  <!-- Preview Section (new) -->
+  <div id="previewSection" style="display:none; margin-top:20px;">
+    <h3>🎧 Preview Your Performance</h3>
+    <audio id="previewAudio" controls></audio>
+    <div class="button-row">
+      <button id="confirmSaveBtn" disabled>💾 Save to Gallery</button>
+      <button id="reRecordBtn">🔄 Re-record</button>
+    </div>
+  </div>
 
   <!-- Gallery -->
   <h2 class="gallery-title">🎵 Community Gallery</h2>

@@ -424,3 +424,59 @@ button {
 .notification.error {
   background: #e53935;
 }
+
+/* ===============================
+   🎧 Preview Section Styling
+   =============================== */
+#previewSection {
+  background: linear-gradient(135deg, #2a003f, #120022);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  padding: 20px;
+  margin: 25px auto;
+  max-width: 700px;
+  text-align: center;
+  animation: fadeIn 0.6s ease;
+}
+
+#previewSection h3 {
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+  font-weight: 700;
+  background: linear-gradient(90deg, var(--accent), var(--purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1px;
+  display: inline-block;
+}
+
+#previewAudio {
+  width: 100%;
+  margin: 15px 0;
+  border-radius: 10px;
+  background: #111;
+  box-shadow: 0 0 10px rgba(198, 255, 0, 0.3);
+}
+
+#previewSection .button-row {
+  justify-content: center;
+  gap: 15px;
+}
+
+#confirmSaveBtn {
+  background: linear-gradient(90deg, #7d3cff, #ff3d6a);
+  color: #fff;
+}
+#confirmSaveBtn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px #7d3cff;
+}
+
+#reRecordBtn {
+  background: linear-gradient(90deg, #a8ff78, #78ffd6);
+  color: #111;
+}
+#reRecordBtn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px #78ffd6;
+}
